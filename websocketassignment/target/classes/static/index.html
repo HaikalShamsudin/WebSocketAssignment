@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spring WebSocket Javax based</title>
+
+    <style>
+        /* Apply CSS styles to position tables */
+        .left-user, .right-user {
+            width: 35%;
+            float: left;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        /* Add additional styles for better appearance */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 0px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="left-user">
+		<table>
+			<tr>
+				<td colspan="2">
+					<input type="text" id="username" placeholder="Username" />
+					<button type="button" id ="connect" onclick="connect();">Connect</button>
+					<button type="button" id ="disconnect" onclick="disconnect();">Disconnect</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea readonly="true" rows="10" cols="80" id="log"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" size="75" id="msg" placeholder="Message" />
+					<button type="button" id="send" onclick="send();">Send</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="right-user">
+		<table>
+			<tr>
+				<td colspan="2">
+					<input type="text" id="username2" placeholder="Username" />
+					<button type="button" id ="connect2" onclick="connect2();">Connect</button>
+					<button type="button" id ="disconnect2" onclick="disconnect2();">Disconnect</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea readonly="true" rows="10" cols="80" id="log2"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" size="75" id="msg2" placeholder="Message" />
+					<button type="button"  id="send2" onclick="send2();">Send</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+<script src="websocket.js"></script>
+
+</html>
